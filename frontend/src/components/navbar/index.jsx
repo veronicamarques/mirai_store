@@ -22,7 +22,7 @@ function Header() {
   return (
     <header>
       <div className="shop-alert-content alert alert-secondary" role="alert">
-        <span>Frete Grátis apenas esta semana!</span>
+        <span>Frete Grátis pra sempre!</span>
       </div>
       <nav className="container">
         <div className="shop-header-content">
