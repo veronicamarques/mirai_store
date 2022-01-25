@@ -25,12 +25,12 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/produtos" className="nav-links" onClick={closeMobileMenu}>
+                <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
                   <span className="undereffect">Produtos</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/produtos" className="nav-links" onClick={closeMobileMenu}>
+                <Link to="/terms" className="nav-links" onClick={closeMobileMenu}>
                   <span className="undereffect">Termos de Servico</span>
                 </Link>
               </li>
@@ -38,13 +38,16 @@ function Navbar() {
           </div>
           <div className="shop-header-menu-area">
             <i className="fas fa-shopping-cart fa-lg"></i>
-            <i className="fas fa-user fa-lg"></i>
+            <Link to="/login">
+              <i className="fas fa-user fa-lg"></i>
+            </Link>
             <div className="shop-hambuger-menu" onClick={handleClick}>
               <i className={click ? "fas fa-times fa-lg" : "fas fa-bars fa-lg"}></i>
             </div>
           </div>
         </div>
       </nav>
+      <hr className="container" />
     </header>
   );
 }

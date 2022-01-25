@@ -47,6 +47,8 @@ ol {
 }
 
 .shop-nav-menu-content {
+  display: flex;
+  align-items: center;
   height: 5em;
 }
 
