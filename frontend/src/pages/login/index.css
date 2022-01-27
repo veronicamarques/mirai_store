@@ -1,0 +1,22 @@
+.pointer{
+  cursor: pointer;
+}
+
+.icon-view{
+  font-size:20px;
+  position:absolute;
+  right:1rem;
+  top:1.3rem;
+  background-color:white;
+  padding-left:6px;
+  cursor:pointer;
+  z-index:2;
+}
+
+.background-login{
+  background-color: #bdc3c97a;
+}
+
+.fa-eye {
+  padding-right: 1.2px !important;
+}

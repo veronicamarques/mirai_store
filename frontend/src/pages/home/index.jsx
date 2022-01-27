@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../../components/navbar/index";
 
 function Home() {
   return (
     <>
+    <Navbar />
       <br />
       <br />
       <br />
