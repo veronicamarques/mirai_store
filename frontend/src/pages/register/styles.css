@@ -1,0 +1,27 @@
+.pointer {
+  cursor: pointer;
+}
+
+.icon-view {
+  font-size: 20px;
+  position: absolute;
+  right: 1rem;
+  top: 1.3rem;
+  background-color: white;
+  padding-left: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.background-login {
+  background-color: #bdc3c97a;
+}
+
+.fa-eye {
+  padding-right: 1.2px !important;
+}
+
+.form-control:focus {
+  border-color: #0e19247a;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #bdc3c97a;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./index.css";
+import "./styles.css";
 import { default as SiteLogo } from "../../assets/img/logo.svg";
 
 function Navbar() {

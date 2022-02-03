@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./index.css";
+import "./styles.css";
 import { default as SiteLogo } from "../../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 function Login() {
-  const [click, setClick] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const handleShowPassword = () => setShowPassword(!showPassword);
 
-  const handleClick = () => setClick(!click);
   return (
     <>
       <Helmet>
@@ -30,13 +30,17 @@ function Login() {
                 <input type="email" className="form-control rounded-4" id="floatingInput" placeholder="name@example.com" />
                 <label htmlFor="floatingInput">E-mail</label>
               </div>
-              <div id="email-error" className="mb-3 text-danger">Email inválido</div>
-              <div className="form-floating mb-3">
-                <input type={click ? "text" : "password"} className="form-control rounded-4" id="floatingPassword" placeholder="Password" />
-                <label htmlFor="floatingPassword">Senha</label>
-                <i className={click ? "fas fa-eye icon-view" : "fas fa-eye-slash icon-view"} onClick={handleClick}></i>
+              <div style={{ display: "none" }} id="email-error" className="mb-3 text-danger">
+                Email inválido
               </div>
-              <div id="password-error" className="mb-3 text-danger">Senha inválida</div>
+              <div className="form-floating mb-3">
+                <input type={showPassword ? "text" : "password"} className="form-control rounded-4" id="floatingPassword" placeholder="Password" />
+                <label htmlFor="floatingPassword">Senha</label>
+                <i className={showPassword ? "fas fa-eye icon-view" : "fas fa-eye-slash icon-view"} onClick={handleShowPassword}></i>
+              </div>
+              <div style={{ display: "none" }} id="password-error" className="mb-3 text-danger">
+                Senha inválida
+              </div>
               <div className="d-flex mb-3" style={{ justifyContent: "space-between" }}>
                 <div className="form-check">
                   <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -54,9 +58,11 @@ function Login() {
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <div className="mx-auto">
                   Não possui conta?
-                  <span className="pointer" style={{ color: "rgb(181,160,25)", paddingLeft: "4px" }}>
-                    Cadastre-se
-                  </span>
+                  <Link to="/register">
+                    <span className="pointer" style={{ color: "rgb(181,160,25)", paddingLeft: "4px" }}>
+                      Cadastre-se
+                    </span>
+                  </Link>
                 </div>
               </div>
             </form>
