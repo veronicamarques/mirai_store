@@ -1,44 +1,74 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
 import { default as SiteLogo } from "../../assets/img/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import { registerAccount } from "../../utils/api";
 import { checkEmail, checkPassword, checkFullName } from "../../utils/inputCheck";
+import { AuthContext } from "../../contexts/auth";
 
 function Register() {
+  const Navigate = useNavigate();
+
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [isPasswordConfirmed, setIsPasswordConfirmed] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordConfirmation, setShowPasswordConfirmation] = useState(false);
+
+  const [isRegistered, setIsRegistered] = useState(false);
+
+  useEffect(() => {
+    const button = document.getElementById("register-button");
+    if (!email || !password || !fullName || !isPasswordConfirmed) {
+      button.disabled = true;
+    } else {
+      button.disabled = false;
+    }
+  }, [email, password, fullName, isPasswordConfirmed]);
+
+  useEffect(() => {
+    if (isRegistered) {
+      setTimeout(() => {
+        Navigate("/login");
+      }, 3000);
+    }
+  }, [isRegistered]);
 
   const handleShowPassword = (id) => {
     id === 0 ? setShowPassword(!showPassword) : setShowPasswordConfirmation(!showPasswordConfirmation);
   };
 
   const handleFullName = (event) => {
-    const fullName = event.target.value;
+    const value = event.target.value;
     const warning = document.getElementById("name-error");
 
-    if (checkFullName(fullName)) {
+    if (checkFullName(value)) {
       event.target.className += "border border-success";
       warning.style.display = "none";
+      setFullName(value);
     } else {
       event.target.className += "border border-danger";
       warning.style.display = "inline-flex";
+      setFullName("");
     }
   };
 
   const handleEmailInput = (event) => {
-    const email = event.target.value;
+    const value = event.target.value;
     const warning = document.getElementById("email-error");
-    if (checkEmail(email)) {
+    if (checkEmail(value)) {
       event.target.className += "border border-success";
       warning.style.display = "none";
+      setEmail(value);
     } else {
       event.target.className += "border border-danger";
-
       warning.style.display = "inline-flex";
+      setEmail("");
     }
   };
 
@@ -64,16 +94,37 @@ function Register() {
       if (password !== String(value)) {
         warning.style.display = "inline-flex";
         event.target.className += "border border-danger";
+        setIsPasswordConfirmed(false);
       } else {
         warning.style.display = "none";
         event.target.className += "border border-success";
+        setIsPasswordConfirmed(true);
       }
     }
   };
 
+  const handleRegisterButton = async () => {
+    try {
+      const response = await toast.promise(registerAccount(fullName, email, password), {
+        pending: "Enviando informações",
+        success: {
+          render() {
+            setIsRegistered(true);
+            return "Conta criada com sucesso!";
+          },
+        },
+        error: {
+          render({ data }) {
+            return `${data.response.data.error}`;
+          },
+        },
+      });
+    } catch (err) {}
+  };
+
   return (
     <>
-      <div style={{ display: "none", textAlign: "center" }} class="alert alert-danger" role="alert"></div>
+      <ToastContainer autoClose={5000} hideProgressBar={true} />
       <Helmet>
         <style>{"body { background-color: #bdc3c97a; }"}</style>
       </Helmet>
@@ -135,7 +186,7 @@ function Register() {
               <div style={{ display: "none" }} id="password-check-error" className="mb-3 text-danger">
                 As senhas devem ser iguais.
               </div>
-              <button className="w-100 mb-2 btn btn-lg rounded-4 bg-dark mb-4" type="submit">
+              <button id="register-button" className="w-100 mb-2 btn btn-lg rounded-4 bg-dark mb-4" type="button" onClick={handleRegisterButton}>
                 <span className="text-white">Cadastrar</span>
               </button>
               <div style={{ display: "flex", justifyContent: "center" }}>
