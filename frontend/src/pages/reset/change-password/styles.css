@@ -20,8 +20,3 @@
 .fa-eye {
   padding-right: 1.2px !important;
 }
-
-.form-control:focus {
-  border-color: #0e19247a;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #bdc3c97a;
-}

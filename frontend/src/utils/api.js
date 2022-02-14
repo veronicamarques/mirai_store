@@ -19,3 +19,15 @@ export const createSession = async (email, password) => {
     password,
   });
 };
+
+export const confirmEmail = async (token) => {
+  return api.get(`/confirmation/${token}`);
+};
+
+export const sendPasswordReset = async (email) => {
+  return api.get(`/password-reset/${email}`);
+};
+
+export const sendPasswordChange = async (token, password) => {
+  return api.put(`/password-change`, { token, password });
+};

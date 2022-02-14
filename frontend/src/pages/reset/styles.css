@@ -1,0 +1,11 @@
+.pointer {
+  cursor: pointer;
+}
+
+.background-login {
+  background-color: #bdc3c97a;
+}
+
+.fa-eye {
+  padding-right: 1.2px !important;
+}

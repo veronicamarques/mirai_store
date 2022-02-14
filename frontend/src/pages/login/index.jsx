@@ -98,12 +98,14 @@ function Login() {
               <div className="d-flex mb-3" style={{ justifyContent: "space-between" }}>
                 <div className="form-check">
                   <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" onChange={handleStaySignedIn} />
-                  <label className="form-check-label pointer" htmlFor="flexCheckDefault">
+                  <label className="form-check-label pointer noselect" htmlFor="flexCheckDefault">
                     Mantenha-me conectado
                   </label>
                 </div>
                 <div>
-                  <label className="pointer">Esqueceu a senha?</label>
+                  <Link to="/password-reset">
+                    <label className="pointer noselect">Esqueceu a senha?</label>
+                  </Link>
                 </div>
               </div>
               <button id="login-button" className="w-100 mb-2 btn btn-lg rounded-4 bg-dark mb-4" type="button" onClick={handleLoginButton}>

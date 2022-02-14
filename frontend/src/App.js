@@ -6,6 +6,9 @@ import Login from "./pages/login";
 import Products from "./pages/products";
 import Terms from "./pages/terms";
 import Register from "./pages/register";
+import PasswordRecovery from "./pages/reset";
+import PasswordChange from "./pages/reset/change-password";
+import EmailConfirmation from "./pages/confirmation/";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
@@ -42,6 +45,9 @@ function App() {
           />
           <Route path="/products" element={<Products />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/password-reset" element={<PasswordRecovery />} />
+          <Route path="/password-reset/:token" element={<PasswordChange />} />
+          <Route path="/email-confirm/:token" element={<EmailConfirmation />} />
         </Routes>
       </AuthProvider>
     </Router>

@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { createSession } from "../utils/api";
+import { createSession, confirmEmail, sendPasswordReset, sendPasswordChange } from "../utils/api";
 import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
@@ -53,5 +53,59 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {};
 
-  return <AuthContext.Provider value={{ User, Loading, login, logout }}>{children}</AuthContext.Provider>;
+  const confirm_email = async (token) => {
+    try {
+      await confirmEmail(token);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  };
+
+  const send_password_reset = async (email) => {
+    try {
+      await toast.promise(sendPasswordReset(email), {
+        pending: "Enviando informações",
+        success: {
+          render() {
+            return "Email enviado com sucesso!";
+          },
+        },
+        error: {
+          render({ data }) {
+            if (data.response) return `${data.response.data.error}`;
+            else return "Falha na comunicação com o servidor.";
+          },
+        },
+      });
+    } catch (err) {
+      return false;
+    }
+  };
+
+  const send_password_change = async (token, password) => {
+    try {
+      await toast.promise(sendPasswordChange(token, password), {
+        pending: "Enviando informações",
+        success: {
+          render() {
+            return "Senha alterada com sucesso!";
+          },
+        },
+        error: {
+          render({ data }) {
+            if (data.response) return `${data.response.data.error}`;
+            else return "Falha na comunicação com o servidor.";
+          },
+        },
+      });
+      return true;
+    } catch (err) {
+      return false;
+    }
+  };
+
+  return (
+    <AuthContext.Provider value={{ User, Loading, login, logout, confirm_email, send_password_reset, send_password_change }}>{children}</AuthContext.Provider>
+  );
 };
