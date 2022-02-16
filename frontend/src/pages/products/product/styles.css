@@ -68,3 +68,32 @@
   color: #e09654;
   cursor: pointer;
 }
+
+@media (max-width: 575px) {
+  #product-info-section {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    float: none;
+  }
+
+  #product-image-section {
+    float: none;
+  }
+
+  #main-image {
+    width: 90vw;
+    padding: 60px 0px 0 0;
+  }
+
+  #main-image img {
+    position: relative;
+    left: 30%;
+    width: 11em;
+  }
+
+  #product-title-info input {
+    display: inline-block;
+    vertical-align: center;
+  }
+}
