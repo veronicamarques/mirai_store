@@ -11,6 +11,7 @@ import PasswordChange from "./pages/reset/change-password";
 import EmailConfirmation from "./pages/confirmation/";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
+import ProductPage from "./pages/products/product";
 
 function App() {
   const Redirect = ({ children }) => {
@@ -44,6 +45,7 @@ function App() {
             }
           />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductPage />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/password-reset" element={<PasswordRecovery />} />
           <Route path="/password-reset/:token" element={<PasswordChange />} />
