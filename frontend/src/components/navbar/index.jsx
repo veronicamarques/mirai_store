@@ -43,16 +43,7 @@ function Navbar() {
                         Moletons
                       </a>
                       <a className="dropdown-item" href="#">
-                        Lançamentos
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Crianças
-                      </a>
-                      <a className="dropdown-item" href="#">
                         Bonés
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Ternos
                       </a>
                     </div>
                   </div>

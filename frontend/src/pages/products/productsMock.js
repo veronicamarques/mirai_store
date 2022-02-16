@@ -45,7 +45,7 @@ const products_mock = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
     discount: 0,
-    category: "camisa",
+    category: "camisas",
   },
   {
     id: 3,
@@ -57,7 +57,43 @@ const products_mock = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
     discount: 0,
-    category: "camisa",
+    category: "camisas",
+  },
+  {
+    id: 4,
+    title: "Moleton Geek",
+    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/preto231-193a25791e4042453a16363948153171-320-0.png",
+    price: 120.0,
+    stock: 12,
+    rating: 10,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
+    discount: 0,
+    category: "moletons",
+  },
+  {
+    id: 5,
+    title: "Moleton Geek",
+    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/cinza-mescla141-d99730e42e08a41d1a16279976319597-320-0.png",
+    price: 87.0,
+    stock: 12,
+    rating: 10,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
+    discount: 0,
+    category: "moletons",
+  },
+  {
+    id: 6,
+    title: "Boné Geek",
+    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/bone-frente1-1986210eca38b7b83115663567347041-320-0.gif",
+    price: 87.0,
+    stock: 12,
+    rating: 10,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
+    discount: 0,
+    category: "moletons",
   },
 ];
 

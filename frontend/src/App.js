@@ -45,7 +45,7 @@ function App() {
             }
           />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductPage />} />
+          <Route path="/products/:category/:id" element={<ProductPage />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/password-reset" element={<PasswordRecovery />} />
           <Route path="/password-reset/:token" element={<PasswordChange />} />

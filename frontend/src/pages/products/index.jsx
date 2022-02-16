@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/index";
 import Footer from "../../components/footer";
 import "./styles.css";
 import Product from "../products/card";
+
 import products_mock from "./productsMock";
-import { Link } from "react-router-dom";
 
 function Products() {
+  const [category, setCategory] = useState("");
+  const [filtered, setFiltered] = useState([]);
+
+  useEffect(() => {
+    const filter = products_mock.filter((product) => product.category === category);
+    setFiltered(filter);
+  }, [filtered]);
+
   return (
     <>
       <Navbar />
@@ -27,15 +35,15 @@ function Products() {
               <form>
                 <div className="form-group">
                   <input type="checkbox" id="artisan" />
-                  <label for="artisan">Camisas</label>
+                  <label htmlFor="artisan">Camisas</label>
                 </div>
                 <div className="form-group">
                   <input type="checkbox" id="breakfast" />
-                  <label for="breakfast">Moletons</label>
+                  <label htmlFor="breakfast">Moletons</label>
                 </div>
                 <div className="form-group">
                   <input type="checkbox" id="healthy" />
-                  <label for="healthy">Bonés</label>
+                  <label htmlFor="healthy">Bonés</label>
                 </div>
               </form>
             </div>
@@ -59,9 +67,7 @@ function Products() {
             </div>
             <br />
             <div className="row">
-              {products_mock.map((product) => (
-                <Product product={product} />
-              ))}
+              {category ? filtered.map((product) => <Product product={product} />) : products_mock.map((product) => <Product product={product} />)}
             </div>
           </section>
         </div>
