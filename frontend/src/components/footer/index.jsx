@@ -5,6 +5,12 @@ import { default as Boleto } from "../../assets/img/boleto.png";
 import { default as AmericanExpress } from "../../assets/img/americanexpress.png";
 import { default as Hipercard } from "../../assets/img/hipercard.png";
 import { default as MasterCard } from "../../assets/img/mastercard.png";
+import { default as Facebook } from "../../assets/img/facebook.png";
+import { default as Instagram } from "../../assets/img/instagram.png";
+import { default as Email } from "../../assets/img/envelope-fill.png";
+import { default as Uni } from "../../assets/img/unicornio.png";
+import { default as Uni2 } from "../../assets/img/unicornio2.png";
+import { default as Uni3 } from "../../assets/img/unicornio3.png";
 
 function Footer() {
   return (
@@ -13,7 +19,7 @@ function Footer() {
         <div className="row">
           <div className="col">
             <h1 className="list-unstyled">
-              <h4>NewsLetter</h4>
+              <h4>NewsLetter <img src={Uni3} style={{width:"30px"}} alt="" /></h4>
               <form>
                 <div className="row">
                   <div className="col col-footer">
@@ -30,10 +36,28 @@ function Footer() {
             </h1>
           </div>
           {/* Column2 */}
-          <div className="col">
-            <ui className="list-unstyled">
-
-            </ui>
+          <div className="col text-center">
+            <h1 className="list-unstyled">
+              <h4 style={{marginBottom:"0"}}>Redes Sociais <img src={Uni2} style={{width:"30px"}} alt="" /></h4>
+              <div>
+                <img className="icons-social" src={Facebook} alt="Facebook" style={{marginRight:"12px"}}/>
+                <img className="icons-social" src={Instagram} alt="Instagram" />
+                <img className="icons-social" src={Email} alt="Email" style={{marginLeft:"17px"}}/>
+              </div>
+            </h1>          
+          </div>
+          {/* Column2 */}
+          <div className="col text-center">
+            <h1 className="list-unstyled">
+              <h4>Contato <img src={Uni} style={{width:"30px"}} alt="" /></h4>
+              <hr className="linha-footer" />
+              <p className="contato-footer"> (11) 6969-6969 | vendas@miraistore.com.br</p>
+              <hr className="linha-footer" />
+              <p></p>
+              <hr className="linha-footer" />
+              <p className="contato-footer"> Rua tal tal tal, 6969</p>
+              <hr className="linha-footer" />
+            </h1>          
           </div>
         </div>
         <div className="row">
