@@ -7,7 +7,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { registerAccount } from "../../utils/api";
 import { checkEmail, checkPassword, checkFullName } from "../../utils/inputCheck";
-import { AuthContext } from "../../contexts/auth";
 
 function Register() {
   const Navigate = useNavigate();

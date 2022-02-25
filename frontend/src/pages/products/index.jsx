@@ -7,13 +7,43 @@ import Product from "../products/card";
 import products_mock from "./productsMock";
 
 function Products() {
-  const [category, setCategory] = useState("");
-  const [filtered, setFiltered] = useState([]);
+  const [filtered, setFiltered] = useState(products_mock);
 
-  useEffect(() => {
-    const filter = products_mock.filter((product) => product.category === category);
-    setFiltered(filter);
-  }, [filtered]);
+  const handleCategory = (event, category) => {
+    var checkboxes = document.getElementsByName("category");
+    checkboxes.forEach((item) => {
+      if (item !== event.target) item.checked = false;
+    });
+
+    if (event.target.checked) {
+      const filter = products_mock.filter((product) => product.category === category);
+
+      setFiltered(filter);
+    } else {
+      setFiltered(products_mock);
+    }
+  };
+
+  const handleSortProducts = (event) => {
+    var sortedProducts = [...filtered];
+
+    switch (event.target.value) {
+      case "low-price":
+        sortedProducts.sort((a, b) => a.price > b.price);
+        break;
+      case "high-price":
+        sortedProducts.sort((a, b) => a.price < b.price);
+        break;
+      case "popularity":
+        sortedProducts.sort((a, b) => a.rating < b.rating);
+        break;
+      default:
+        sortedProducts.sort((a, b) => a.price > b.price);
+        break;
+    }
+
+    setFiltered(sortedProducts);
+  };
 
   return (
     <>
@@ -34,40 +64,42 @@ function Products() {
               </div>
               <form>
                 <div className="form-group">
-                  <input type="checkbox" id="artisan" />
-                  <label htmlFor="artisan">Camisas</label>
+                  <input type="checkbox" onChange={(e) => handleCategory(e, "camisas")} name="category" />
+                  <label htmlFor="camisas">Camisas</label>
                 </div>
                 <div className="form-group">
-                  <input type="checkbox" id="breakfast" />
-                  <label htmlFor="breakfast">Moletons</label>
+                  <input type="checkbox" onChange={(e) => handleCategory(e, "moletons")} name="category" />
+                  <label htmlFor="moletons">Moletons</label>
                 </div>
                 <div className="form-group">
-                  <input type="checkbox" id="healthy" />
-                  <label htmlFor="healthy">Bonés</label>
+                  <input type="checkbox" onChange={(e) => handleCategory(e, "bones")} name="category" />
+                  <label htmlFor="bones">Bonés</label>
                 </div>
               </form>
             </div>
           </section>
 
           <section id="products">
-            <div id="products-nav-bar" class="d-flex flex-row">
-              <div class="text-muted m-2" id="res">
+            <div id="products-nav-bar" className="d-flex flex-row">
+              <div className="text-muted m-2" id="res">
                 Mostrando 20 resultados
               </div>
-              <div id="sort-bar" class="ml-auto mr-lg-4">
-                <div id="sorting" class="border rounded p-1 m-1">
-                  <span class="text-muted">Ordenar por</span>
-                  <select name="sort" id="sort">
+              <div id="sort-bar" className="ml-auto mr-lg-4">
+                <div id="sorting" className="border rounded p-1 m-1">
+                  <span className="text-muted">Ordenar por</span>
+                  <select name="sort" id="sort" onChange={handleSortProducts}>
                     <option value="low-price">Menor preço</option>
                     <option value="high-price">Maior preço</option>
-                    <option value="popularity">Mais vendido</option>
+                    <option value="popularity">Popular</option>
                   </select>
                 </div>
               </div>
             </div>
             <br />
             <div className="row">
-              {category ? filtered.map((product) => <Product product={product} />) : products_mock.map((product) => <Product product={product} />)}
+              {filtered.map((product) => (
+                <Product product={product} />
+              ))}
             </div>
           </section>
         </div>

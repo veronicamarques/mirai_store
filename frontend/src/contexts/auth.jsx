@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [User, setUser] = useState(null);
+  const [User, setUser] = useState({});
   const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -106,6 +106,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ User, Loading, login, logout, confirm_email, send_password_reset, send_password_change }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ User, Loading, login, logout, confirm_email, send_password_reset, send_password_change, setUser }}>
+      {children}
+    </AuthContext.Provider>
   );
 };

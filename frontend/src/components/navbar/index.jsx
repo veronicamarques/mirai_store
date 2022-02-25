@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { default as SiteLogo } from "../../assets/img/logo.svg";
+import { AuthContext } from "../../contexts/auth";
 
 function Navbar() {
+  const { User } = React.useContext(AuthContext);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -67,11 +69,11 @@ function Navbar() {
             </Link>
             <div>
               <i className="fas fa-heart fa-lg"></i>
-              <span className="cart-summary">12</span>
+              <span className="cart-summary">{User?.wishList?.length ? User?.wishList?.length : 0}</span>
             </div>
             <div>
               <i className="fas fa-shopping-cart fa-lg"></i>
-              <span className="cart-summary">3</span>
+              <span className="cart-summary">{User?.cartItems?.length ? User?.cartItems?.length : 0}</span>
             </div>
 
             <div className="shop-hambuger-menu" onClick={handleClick}>

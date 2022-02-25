@@ -1,5 +1,14 @@
+#card-container {
+  display: flex;
+  justify-content: center;
+}
+
 #card-info p {
   font-weight: 600;
+}
+
+#product-container {
+  width: max-content;
 }
 
 #sidebar {
@@ -87,9 +96,11 @@ h6 {
   .mobile-filter {
     display: none;
   }
-
   #sidebar {
     display: none;
+  }
+  #product-container {
+    margin-left: 0 !important;
   }
 }
 

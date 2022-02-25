@@ -3,11 +3,24 @@ import Navbar from "../../../components/navbar";
 import "./styles.css";
 import products_mock from "../productsMock";
 import { useParams } from "react-router-dom";
+import { AuthContext } from "../../../contexts/auth";
 
 function ProductPage() {
+  const { User, setUser } = React.useContext(AuthContext);
   const { id } = useParams();
 
   const product = products_mock[id];
+
+  const addToWishList = () => {
+    (User.wishList = User.wishList ? User.wishList : []).push("bar");
+    setUser({ ...User });
+  };
+
+  const addToCart = () => {
+    (User.cartItems = User.cartItems ? User.cartItems : []).push("bar");
+    setUser({ ...User });
+  };
+
   return (
     <div>
       <Navbar />
@@ -28,10 +41,10 @@ function ProductPage() {
                 <p>{product.description}</p>
               </small>
               <h7>Estoque: {product.stock}</h7>
-              <input type="submit" className="btn" value="Incluir no carrinho +" />
+              <input type="submit" className="btn" value="Incluir no carrinho +" onClick={addToCart} />
               <div className="wish-link">
                 <i className="fas fa-heart fa-lg" />
-                <span>Add To Wishlist</span>
+                <span onClick={addToWishList}>Add To Wishlist</span>
               </div>
             </div>
           </div>
