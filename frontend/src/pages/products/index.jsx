@@ -64,16 +64,22 @@ function Products() {
               </div>
               <form>
                 <div className="form-group">
-                  <input type="checkbox" onChange={(e) => handleCategory(e, "camisas")} name="category" />
-                  <label htmlFor="camisas">Camisas</label>
+                  <input id="camisas" type="checkbox" onChange={(e) => handleCategory(e, "camisas")} name="category" />
+                  <label className="noselect" htmlFor="camisas">
+                    Camisas
+                  </label>
                 </div>
                 <div className="form-group">
-                  <input type="checkbox" onChange={(e) => handleCategory(e, "moletons")} name="category" />
-                  <label htmlFor="moletons">Moletons</label>
+                  <input id="moletons" type="checkbox" onChange={(e) => handleCategory(e, "moletons")} name="category" />
+                  <label className="noselect" htmlFor="moletons">
+                    Moletons
+                  </label>
                 </div>
                 <div className="form-group">
-                  <input type="checkbox" onChange={(e) => handleCategory(e, "bones")} name="category" />
-                  <label htmlFor="bones">Bonés</label>
+                  <input id="bones" type="checkbox" onChange={(e) => handleCategory(e, "bones")} name="category" />
+                  <label className="noselect" htmlFor="bones">
+                    Bonés
+                  </label>
                 </div>
               </form>
             </div>

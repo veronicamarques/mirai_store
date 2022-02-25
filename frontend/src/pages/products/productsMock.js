@@ -96,28 +96,28 @@ const products_mock = [
     category: "bones",
   },
   {
-    id: 7,
-    title: "Boné Geek",
-    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/bone-frente1-1986210eca38b7b83115663567347041-320-0.gif",
+    id: 8,
+    title: "Camisa Geek",
+    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/galileu-preta1-4fc5d31f39adfe333516156656821561-320-0.jpeg",
     price: 87.0,
     stock: 12,
     rating: 10,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
     discount: 0,
-    category: "bones",
+    category: "camisas",
   },
   {
-    id: 7,
-    title: "Boné Geek",
-    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/bone-frente1-1986210eca38b7b83115663567347041-320-0.gif",
+    id: 9,
+    title: "Camisa Geek",
+    image: "https://d3ugyf2ht6aenh.cloudfront.net/stores/726/919/products/marscopter-11-e58005810a3a9baa3216178093126834-320-0.jpg",
     price: 87.0,
     stock: 12,
     rating: 10,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.",
     discount: 0,
-    category: "bones",
+    category: "camisas",
   },
 ];
 

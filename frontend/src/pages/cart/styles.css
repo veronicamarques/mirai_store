@@ -1,10 +1,10 @@
 #cart-container {
   margin-left: 50px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 #cart-grid {
-  width: 65%;
+  width: 60%;
   background-color: rgba(219, 219, 219, 0.24);
   border-radius: 10px;
   padding-top: 20px;
@@ -95,4 +95,59 @@
 
 #product-quantity ul {
   max-width: 100%;
+}
+
+#checkout-info {
+  background-color: rgba(219, 219, 219, 0.24);
+  border-radius: 10px;
+}
+
+#payment-container {
+  float: right;
+  width: 35%;
+  padding-right: 150px;
+}
+
+#checkout-info h2 {
+  text-align: center;
+}
+
+#checkout-info button {
+  width: 100%;
+  border-color: #222222;
+  background-color: #222222;
+  color: #fff;
+  height: 54px;
+  line-height: 52px;
+  padding: 0 24px;
+
+  margin: 0;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0;
+  outline: none;
+  background-image: none;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  text-decoration: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  transition: background 0.2s, border-color, 0.2s, color 0.2s;
+}
+
+#checkout-info button div {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#checkout-info {
+  padding: 20px 20px 20px 20px;
 }

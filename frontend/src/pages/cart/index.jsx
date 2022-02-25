@@ -7,6 +7,24 @@ function CartPage() {
     <div>
       <Navbar />
       <section id="cart-container">
+        <div id="payment-container">
+          <div id="checkout-info">
+            <h2>Resumo do Pedido</h2>
+            <div style={{ marginTop: "30px", marginBottom: "30px" }}>
+              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
+              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
+              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
+            </div>
+            <h3 style={{ float: "right" }}>R$20,00</h3>
+            <h3>Total:</h3>
+            <br />
+            <button>
+              <div>FINALIZAR COMPRA</div>
+            </button>
+            <p style={{ textAlign: "center", marginTop: "20px" }}>Aplique um Código de cupom, para receber descontos.</p>
+          </div>
+          <div></div>
+        </div>
         <div id="cart-grid">
           <h3>Resumo do Carrinho</h3>
           <table>
@@ -48,10 +66,6 @@ function CartPage() {
               </td>
             </tbody>
           </table>
-        </div>
-        <div>
-          <div></div>
-          <div></div>
         </div>
       </section>
     </div>

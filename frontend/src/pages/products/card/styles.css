@@ -9,6 +9,7 @@
 
 #product-container {
   width: max-content;
+  margin: 0 !important;
 }
 
 #sidebar {
