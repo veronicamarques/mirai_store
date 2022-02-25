@@ -1,0 +1,3 @@
+.carousel-fade .carousel-item.active{
+  z-index: 0;
+}

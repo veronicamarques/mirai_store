@@ -60,6 +60,7 @@ function Footer() {
             </h1>          
           </div>
         </div>
+        {/* Cartões */}
         <div className="row desktop-visible">
           <p className="col-sm text-center ">
             <img className="icons-cards" src={VisaCard} alt="Visa" />
@@ -69,7 +70,7 @@ function Footer() {
             <img className="icons-cards" src={MasterCard} alt="MasterCard" />
           </p>
         </div>
-        <hr />
+        {/* Copyright */}
         <div className="row">
           <p className="col-sm text-center">
             &copy;{new Date().getFullYear()} Mirai Store | Todos os direitos reservados
