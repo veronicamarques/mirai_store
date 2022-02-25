@@ -72,7 +72,9 @@ function Navbar() {
               <span className="cart-summary">{User?.wishList?.length ? User?.wishList?.length : 0}</span>
             </div>
             <div>
-              <i className="fas fa-shopping-cart fa-lg"></i>
+              <Link to="/cart">
+                <i className="fas fa-shopping-cart fa-lg"></i>
+              </Link>
               <span className="cart-summary">{User?.cartItems?.length ? User?.cartItems?.length : 0}</span>
             </div>
 

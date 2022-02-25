@@ -12,6 +12,7 @@ import EmailConfirmation from "./pages/confirmation/";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 import ProductPage from "./pages/products/product";
+import CartPage from "./pages/cart";
 
 function App() {
   const Redirect = ({ children }) => {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/password-reset" element={<PasswordRecovery />} />
           <Route path="/password-reset/:token" element={<PasswordChange />} />
           <Route path="/email-confirm/:token" element={<EmailConfirmation />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </AuthProvider>
     </Router>
