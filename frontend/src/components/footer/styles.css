@@ -37,3 +37,36 @@
     font-size: 14px;
     margin: 10px 0 10px 0;
   }
+
+  @media screen and (min-width: 999px) {
+    .label-commons{
+      font-size: 22pt;
+    }
+  }
+
+  @media screen and (max-width: 999px) {
+    .desktop-visible{
+      display: none;
+    }
+
+    .all-visible{
+      display: block;
+    }
+
+    .label-commons{
+      font-size: 13pt;
+    }
+
+    .icons-social{
+      width: 28px;
+    }
+
+    .contato-footer{
+      font-size: 12px;
+      margin: 5px 0 5px 0;
+    }
+
+    hr:not([size]) {
+      height: 0;
+    }
+  }

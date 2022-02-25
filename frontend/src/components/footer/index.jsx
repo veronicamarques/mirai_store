@@ -16,10 +16,10 @@ function Footer() {
   return (
     <div className="main-footer">
       <div className="container">
-        <div className="row">
-          <div className="col">
+        <div className="row all-visible">
+          <div className="col desktop-visible">
             <h1 className="list-unstyled">
-              <h4>NewsLetter <img src={Uni3} style={{width:"30px"}} alt="" /></h4>
+              <label className="label-commons" style={{fontSize:"20pt"}}>NewsLetter <img src={Uni3} style={{width:"30px",marginBottom:"6px"}} alt="" /></label>
               <form>
                 <div className="row">
                   <div className="col col-footer">
@@ -35,10 +35,10 @@ function Footer() {
               </form>
             </h1>
           </div>
-          {/* Column2 */}
+          {/* Redes Sociais */}
           <div className="col text-center">
             <h1 className="list-unstyled">
-              <h4 style={{marginBottom:"0"}}>Redes Sociais <img src={Uni2} style={{width:"30px"}} alt="" /></h4>
+              <label className="label-commons" style={{marginBottom:"0"}}>Redes Sociais <img src={Uni2} style={{width:"30px",marginBottom:"6px"}} alt="" /></label>
               <div>
                 <img className="icons-social" src={Facebook} alt="Facebook" style={{marginRight:"12px"}}/>
                 <img className="icons-social" src={Instagram} alt="Instagram" />
@@ -46,10 +46,10 @@ function Footer() {
               </div>
             </h1>          
           </div>
-          {/* Column2 */}
+          {/* Contato */}
           <div className="col text-center">
             <h1 className="list-unstyled">
-              <h4>Contato <img src={Uni} style={{width:"30px"}} alt="" /></h4>
+              <label className="label-commons">Contato <img src={Uni} style={{width:"30px", marginBottom:"6px"}} alt="" /></label>
               <hr className="linha-footer" />
               <p className="contato-footer"> (11) 6969-6969 | vendas@miraistore.com.br</p>
               <hr className="linha-footer" />
@@ -60,14 +60,13 @@ function Footer() {
             </h1>          
           </div>
         </div>
-        <div className="row">
-          <p className="col-sm text-center">
-          <img className="icons-cards" src={VisaCard} alt="Visa" />
-          <img className="icons-cards" src={Boleto} alt="Boleto" />
-          <img className="icons-cards" src={AmericanExpress} alt="American Express" />
-          <img className="icons-cards" src={Hipercard} alt="HiperCard" />
-          <img className="icons-cards" src={MasterCard} alt="MasterCard" />
-            
+        <div className="row desktop-visible">
+          <p className="col-sm text-center ">
+            <img className="icons-cards" src={VisaCard} alt="Visa" />
+            <img className="icons-cards" src={Boleto} alt="Boleto" />
+            <img className="icons-cards" src={AmericanExpress} alt="American Express" />
+            <img className="icons-cards" src={Hipercard} alt="HiperCard" />
+            <img className="icons-cards" src={MasterCard} alt="MasterCard" />
           </p>
         </div>
         <hr />
