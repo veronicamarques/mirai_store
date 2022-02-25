@@ -50,13 +50,13 @@ function CartPage() {
                 <div id="product-quantity">
                   <ul>
                     <li id="subtract-button">
-                      <span>-</span>
+                      <div>-</div>
                     </li>
-                    <li>
+                    <li id="amount-button">
                       <input type="text" />
                     </li>
                     <li id="sum-button">
-                      <span>+</span>
+                      <div>+</div>
                     </li>
                   </ul>
                 </div>
