@@ -55,10 +55,6 @@ function Navbar() {
               <i className="fas fa-user fa-lg"></i>
             </Link>
             <div>
-              <i className="fas fa-heart fa-lg"></i>
-              <span className="cart-summary">0</span>
-            </div>
-            <div>
               <Link to="/cart">
                 <i className="fas fa-shopping-cart fa-lg"></i>
               </Link>

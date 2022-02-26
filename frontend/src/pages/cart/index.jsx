@@ -31,7 +31,9 @@ function CartPage() {
               <tr>
                 <td className="mobile-hidden" style={{ width: "10%" }}></td>
                 <td style={{ width: "45%" }}>Produto</td>
-                <td className="mobile-hidden" style={{ width: "15%" }}>Preço</td>
+                <td className="mobile-hidden" style={{ width: "15%" }}>
+                  Preço
+                </td>
                 <td style={{ width: "15%" }}>Quantidade</td>
                 <td style={{ width: "15%" }}>Total</td>
               </tr>
@@ -39,8 +41,10 @@ function CartPage() {
             {cart.products.map((item) => {
               return (
                 <tbody>
-                  <td className="mobile-hidden" style={{ width: "10%", textAlign:"end"}}>
-                    <span id="delete-button" onClick={() => handleDeleteButton(item)}>Excluir</span>
+                  <td className="mobile-hidden" style={{ width: "10%", textAlign: "end" }}>
+                    <span className="noselect" id="delete-button" onClick={() => handleDeleteButton(item)}>
+                      Excluir
+                    </span>
                   </td>
                   <td style={{ width: "45%" }}>
                     <div id="product-info">
@@ -54,13 +58,13 @@ function CartPage() {
                   <td style={{ width: "15%" }}>
                     <div id="product-quantity">
                       <ul>
-                        <li onClick={() => handleSubtractButton(item)} id="subtract-button">
+                        <li className="noselect" onClick={() => handleSubtractButton(item)} id="subtract-button">
                           <div>-</div>
                         </li>
                         <li id="amount-button">
                           <input type="text" value={item.quantity} />
                         </li>
-                        <li onClick={() => handleSumButton(item)} id="sum-button">
+                        <li className="noselect" onClick={() => handleSumButton(item)} id="sum-button">
                           <div>+</div>
                         </li>
                       </ul>
@@ -78,11 +82,15 @@ function CartPage() {
           <div id="checkout-info">
             <h2>Resumo do Pedido</h2>
             <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
-              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
-              <p style={{ marginBottom: "5px" }}>1x Camiseta Geek</p>
+              {cart.products.map((item) => {
+                return (
+                  <p style={{ marginBottom: "5px" }}>
+                    {item.quantity} x {item.title}
+                  </p>
+                );
+              })}
             </div>
-            <h3 style={{ float: "right" }}>R${cart.totalPrice}</h3>
+            <h3 style={{ float: "right" }}>R${cart.totalPrice.toFixed(2)}</h3>
             <h3>Total:</h3>
             <br />
             <button>

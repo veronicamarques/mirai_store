@@ -69,27 +69,32 @@
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 999px) {
   #product-info-section {
     padding-top: 50px;
     text-align: center;
-    width: 100%;
     float: none;
+    width: 100%;
+  }
+
+  #product-container {
+    max-width: 100%;
   }
 
   #product-image-section {
     float: none;
+    width: 100%;
   }
 
   #main-image {
-    width: 90vw;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding: 60px 0px 0 0;
   }
 
   #main-image img {
-    position: relative;
-    left: 30%;
-    width: 11em;
+    width: 20em;
   }
 
   #product-title-info input {

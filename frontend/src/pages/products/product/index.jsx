@@ -14,8 +14,6 @@ function ProductPage() {
 
   const product = products_mock[id];
 
-  const addToWishList = () => {};
-
   const addToCart = () => {
     if (cart.quantity) {
       const item = cart.products.find((e) => e.id === product.id);
@@ -41,15 +39,9 @@ function ProductPage() {
               <h5>{product.title}</h5>
               <hr />
               <h6>R$ {product.price.toFixed(2)}</h6>
-              <small>
-                <p>{product.description}</p>
-              </small>
+              <small>{product.description}</small>
               <h7>Estoque: {product.stock}</h7>
               <input type="submit" className="btn" value="Incluir no carrinho +" onClick={addToCart} />
-              <div className="wish-link">
-                <i className="fas fa-heart fa-lg" />
-                <span onClick={addToWishList}>Add To Wishlist</span>
-              </div>
             </div>
           </div>
         </section>

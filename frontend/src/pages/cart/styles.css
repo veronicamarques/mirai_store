@@ -156,7 +156,7 @@
   padding: 20px 20px 20px 20px;
 }
 
-#delete-button:hover{
+#delete-button:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -174,22 +174,22 @@
     padding-right: 0;
   }
 
-  #cart-grid{
+  #cart-grid {
     width: 94%;
     background-color: rgba(219, 219, 219, 0.24);
   }
 }
 
 @media screen and (max-width: 920px) {
-  .mobile-hidden{
+  .mobile-hidden {
     display: none !important;
   }
 
-  #cart-container{
+  #cart-container {
     margin-left: 20px;
   }
 
-  #cart-grid tbody h5{
+  #cart-grid tbody h5 {
     font-size: 14px !important;
   }
 
@@ -198,19 +198,19 @@
     height: 25px;
   }
 
-  #cart-grid table thead tr td:nth-child(2){
+  #cart-grid table thead tr td:nth-child(2) {
     width: 40% !important;
   }
 
-  #cart-grid table thead tr td:nth-child(5){
+  #cart-grid table thead tr td:nth-child(5) {
     width: 20% !important;
   }
 
-  #cart-grid table tbody tr td:nth-child(2){
+  #cart-grid table tbody tr td:nth-child(2) {
     width: 40% !important;
   }
 
-  #cart-grid table tbody tr td:nth-child(5){
+  #cart-grid table tbody tr td:nth-child(5) {
     width: 20% !important;
   }
 }
@@ -236,7 +236,7 @@
   }
 } */
 
-@media screen and (min-width: 1189px){
+@media screen and (min-width: 1189px) {
   #payment-container {
     float: right;
     width: 30%;
@@ -251,4 +251,14 @@
     padding-top: 20px;
     padding-left: 20px;
   }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
 }

@@ -25,6 +25,11 @@ const cartSlice = createSlice({
           if (item.quantity > 1) {
             item.quantity += action.payload.quantity;
             state.totalPrice -= item.price;
+          } else {
+            const newProducts = state.products.filter((e) => e.id !== product.id);
+            state.products = newProducts;
+            state.quantity -= 1;
+            state.totalPrice -= product.price * product.quantity;
           }
         }
       }
@@ -34,7 +39,7 @@ const cartSlice = createSlice({
       const newProducts = state.products.filter((e) => e.id !== product.id);
       state.products = newProducts;
       state.quantity -= 1;
-      state.totalPrice -= product.price;
+      state.totalPrice -= product.price * product.quantity;
     },
   },
 });
