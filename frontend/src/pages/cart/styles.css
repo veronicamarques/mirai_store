@@ -3,14 +3,6 @@
   margin-top: 100px;
 }
 
-#cart-grid {
-  width: 60%;
-  background-color: rgba(219, 219, 219, 0.24);
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-
 #cart-grid td {
   text-align: center;
 }
@@ -22,7 +14,8 @@
 }
 
 #cart-grid tbody td {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #cart-grid tbody h5 {
@@ -119,12 +112,6 @@
   border-radius: 10px;
 }
 
-#payment-container {
-  float: right;
-  width: 35%;
-  padding-right: 150px;
-}
-
 #checkout-info h2 {
   text-align: center;
 }
@@ -167,4 +154,101 @@
 
 #checkout-info {
   padding: 20px 20px 20px 20px;
+}
+
+#delete-button:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1189px) {
+  #cart-grid {
+    width: 90%;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  #payment-container {
+    width: 94%;
+    padding-right: 0;
+  }
+
+  #cart-grid{
+    width: 94%;
+    background-color: rgba(219, 219, 219, 0.24);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .mobile-hidden{
+    display: none !important;
+  }
+
+  #cart-container{
+    margin-left: 20px;
+  }
+
+  #cart-grid tbody h5{
+    font-size: 14px !important;
+  }
+
+  #product-quantity li {
+    width: 32px;
+    height: 25px;
+  }
+
+  #cart-grid table thead tr td:nth-child(2){
+    width: 40% !important;
+  }
+
+  #cart-grid table thead tr td:nth-child(5){
+    width: 20% !important;
+  }
+
+  #cart-grid table tbody tr td:nth-child(2){
+    width: 40% !important;
+  }
+
+  #cart-grid table tbody tr td:nth-child(5){
+    width: 20% !important;
+  }
+}
+
+/* @media screen and (min-width: 999px) and (max-width: 1189px) {
+  #payment-container {
+    float: right;
+    width: 28%;
+    padding-right: 50px;
+  }
+
+  #cart-grid{
+    float: left;
+    width: 28%;
+  }
+
+  #cart-grid {
+    width: 70%;
+    background-color: rgba(219, 219, 219, 0.24);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+} */
+
+@media screen and (min-width: 1189px){
+  #payment-container {
+    float: right;
+    width: 30%;
+    margin-right: 45px;
+  }
+
+  #cart-grid {
+    float: left;
+    width: 64%;
+    background-color: rgba(219, 219, 219, 0.24);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
 }
