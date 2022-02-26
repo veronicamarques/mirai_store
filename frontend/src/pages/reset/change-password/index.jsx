@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { AuthContext } from "../../../contexts/auth";
 
 import "./styles.css";
 
@@ -12,8 +11,6 @@ import { checkPassword } from "../../../utils/inputCheck";
 
 function PasswordChange() {
   let Navigate = useNavigate();
-
-  const { send_password_change } = React.useContext(AuthContext);
 
   const [password, setPassword] = useState("");
   const [isPasswordConfirmed, setIsPasswordConfirmed] = useState(false);
@@ -68,13 +65,14 @@ function PasswordChange() {
   };
 
   const handleConfirmButton = () => {
+    /*
     send_password_change(token, password).then((res) => {
       if (res) {
         setTimeout(() => {
           Navigate("/login");
         }, 3000);
       }
-    });
+    });*/
   };
 
   return (

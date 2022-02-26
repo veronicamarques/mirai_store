@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { AuthContext } from "../../contexts/auth";
 
 import "./styles.css";
 
@@ -11,8 +10,6 @@ import { default as SiteLogo } from "../../assets/img/logo.svg";
 import { checkEmail } from "../../utils/inputCheck";
 
 function PasswordRecovery() {
-  const { send_password_reset } = React.useContext(AuthContext);
-
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -35,7 +32,7 @@ function PasswordRecovery() {
   };
 
   const handleSendButton = () => {
-    send_password_reset(email);
+    //send_password_reset(email);
   };
 
   return (

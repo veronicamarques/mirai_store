@@ -83,7 +83,7 @@
   background: #fff;
 }
 
-#subtract-button{
+#subtract-button {
   border-radius: 100px 0 0 100px;
   white-space: nowrap;
   cursor: pointer;
@@ -104,7 +104,9 @@
   cursor: pointer;
 }
 
-#subtract-button:hover, #sum-button:hover, #product-quantity input:hover{
+#subtract-button:hover,
+#sum-button:hover,
+#product-quantity input:hover {
   border: 1px solid black;
 }
 

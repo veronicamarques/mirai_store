@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import emailSuccess from "../../assets/img/email-confirmation.jpg";
 import emailFailure from "../../assets/img/email-failure.jpeg";
 import { useParams } from "react-router-dom";
-import { AuthContext } from "../../contexts/auth";
 
 function EmailConfirmation() {
-  const { confirm_email } = React.useContext(AuthContext);
   const { token } = useParams();
 
   const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    confirm_email(token).then((res) => {
-      if (res) setIsEmailConfirmed(true);
-    });
-  });
 
   return (
     <>

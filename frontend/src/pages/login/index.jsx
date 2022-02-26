@@ -5,13 +5,9 @@ import { default as SiteLogo } from "../../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import { AuthContext } from "../../contexts/auth";
-
 import { checkEmail } from "../../utils/inputCheck";
 
 function Login() {
-  const { login } = React.useContext(AuthContext);
-
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -52,7 +48,7 @@ function Login() {
   };
 
   const handleLoginButton = async () => {
-    await login(email, password, staySignedIn);
+    //await login(email, password, staySignedIn);
   };
 
   return (

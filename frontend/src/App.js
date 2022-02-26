@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home";
 import Login from "./pages/login";
@@ -10,11 +10,14 @@ import PasswordRecovery from "./pages/reset";
 import PasswordChange from "./pages/reset/change-password";
 import EmailConfirmation from "./pages/confirmation/";
 
-import { AuthProvider, AuthContext } from "./contexts/auth";
 import ProductPage from "./pages/products/product";
 import CartPage from "./pages/cart";
 
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 function App() {
+  /*
   const Redirect = ({ children }) => {
     const routeName = String(children.type.name);
     const { User } = React.useContext(AuthContext);
@@ -23,26 +26,26 @@ function App() {
 
     return children;
   };
-
+*/
   return (
     <Router>
-      <AuthProvider>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
             path="/login"
             element={
-              <Redirect>
-                <Login />
-              </Redirect>
+              //<Redirect>
+              <Login />
+              // </Redirect>
             }
           />
           <Route
             path="/register"
             element={
-              <Redirect>
-                <Register />
-              </Redirect>
+              //<Redirect>
+              <Register />
+              //</Redirect>
             }
           />
           <Route path="/products" element={<Products />} />
@@ -53,7 +56,7 @@ function App() {
           <Route path="/email-confirm/:token" element={<EmailConfirmation />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
-      </AuthProvider>
+      </Provider>
     </Router>
   );
 }

@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { default as SiteLogo } from "../../assets/img/logo.svg";
-import { AuthContext } from "../../contexts/auth";
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { User } = React.useContext(AuthContext);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const cartQuantity = useSelector((state) => state.cart.quantity);
 
   return (
     <header>
@@ -35,20 +36,6 @@ function Navbar() {
                       <span className="undereffect">Produtos</span>
                     </Link>
                   </div>
-
-                  <div className="dropdown">
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a className="dropdown-item" href="#">
-                        Camisas
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Moletons
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Bonés
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </li>
               <li className="nav-item">
@@ -69,13 +56,13 @@ function Navbar() {
             </Link>
             <div>
               <i className="fas fa-heart fa-lg"></i>
-              <span className="cart-summary">{User?.wishList?.length ? User?.wishList?.length : 0}</span>
+              <span className="cart-summary">0</span>
             </div>
             <div>
               <Link to="/cart">
                 <i className="fas fa-shopping-cart fa-lg"></i>
               </Link>
-              <span className="cart-summary">{User?.cartItems?.length ? User?.cartItems?.length : 0}</span>
+              <span className="cart-summary">{cartQuantity}</span>
             </div>
 
             <div className="shop-hambuger-menu" onClick={handleClick}>

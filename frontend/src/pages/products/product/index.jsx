@@ -3,22 +3,26 @@ import Navbar from "../../../components/navbar";
 import "./styles.css";
 import products_mock from "../productsMock";
 import { useParams } from "react-router-dom";
-import { AuthContext } from "../../../contexts/auth";
+import { addProduct, updateProduct } from "../../../redux/cartRedux";
+import { useDispatch, useSelector } from "react-redux";
 
 function ProductPage() {
-  const { User, setUser } = React.useContext(AuthContext);
+  const dispatch = useDispatch();
   const { id } = useParams();
+
+  const cart = useSelector((state) => state.cart);
 
   const product = products_mock[id];
 
-  const addToWishList = () => {
-    (User.wishList = User.wishList ? User.wishList : []).push("bar");
-    setUser({ ...User });
-  };
+  const addToWishList = () => {};
 
   const addToCart = () => {
-    (User.cartItems = User.cartItems ? User.cartItems : []).push("bar");
-    setUser({ ...User });
+    if (cart.quantity) {
+      const item = cart.products.find((e) => e.id === product.id);
+
+      if (item) dispatch(updateProduct({ product, quantity: 1 }));
+      else dispatch(addProduct({ ...product, quantity: 1 }));
+    } else dispatch(addProduct({ ...product, quantity: 1 }));
   };
 
   return (
