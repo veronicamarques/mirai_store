@@ -12,7 +12,7 @@ function TermsPage() {
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <p style={{ textAlign: "justify", width: "40em", fontSize: "16pt", margin: "50px" }}>
-          Termos e Condições de Compra e Venda da Mirai Store, com sede na Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP xx.xx-xxx, doravante
+          Termos e Condições de Compra e Venda da Mirai Store, com sede na Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP 01311-100, doravante
           denominada simplesmente Mirai Store, e, de outro lado, o cliente, qualificado no momento da compra dos produtos Mirai Store, doravante denominado
           simplesmente Cliente.
           <br />
@@ -102,7 +102,7 @@ function TermsPage() {
           <br />
           Mirai Store CNPJ: xx.xxx.xxx/xxxx-xx
           <br />
-          Endereço: Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP xx.xxx-xxx
+          Endereço: Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP 01311-100
           <br />
           Loja oficial e registrada | www.miraistore.com
         </p>
