@@ -51,11 +51,11 @@ function Footer() {
             <h1 className="list-unstyled">
               <label className="label-commons">Contato <img src={Uni} style={{width:"30px", marginBottom:"6px"}} alt="" /></label>
               <hr className="linha-footer" />
-              <p className="contato-footer"> (11) 6969-6969 | vendas@miraistore.com.br</p>
+              <p className="contato-footer"> (11) 1258 - 6984 | vendas@miraistore.com</p>
               <hr className="linha-footer" />
               <p></p>
               <hr className="linha-footer" />
-              <p className="contato-footer"> Rua tal tal tal, 6969</p>
+              <p className="contato-footer"> Av. Paulista, 807 - Bela Vista, São Paulo/SP</p>
               <hr className="linha-footer" />
             </h1>          
           </div>
@@ -72,7 +72,7 @@ function Footer() {
         </div>
         {/* Copyright */}
         <div className="row">
-          <p className="col-sm text-center">
+          <p className="col-sm text-center" id="copyright-text">
             &copy;{new Date().getFullYear()} Mirai Store | Todos os direitos reservados
           </p>
         </div>

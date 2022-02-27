@@ -68,4 +68,8 @@
     hr:not([size]) {
       height: 0;
     }
+
+    #copyright-text{
+      font-size: 7pt;
+    }
   }

@@ -11,53 +11,102 @@ function TermsPage() {
       <h1 style={{ textAlign: "center" }}>Termos de Serviço</h1>
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <p style={{ textAlign: "left", width: "40em", fontSize: "20pt", margin: "50px 50px 50px 50px" }}>
-          Termos e Condições de Compra e Venda da Mirai Store, com sede na Avenida Pátria, 1292 - São Geraldo, Porto Alegre/RS - CEP xx.xx-xxx, doravante
+        <p style={{ textAlign: "justify", width: "40em", fontSize: "16pt", margin: "50px" }}>
+          Termos e Condições de Compra e Venda da Mirai Store, com sede na Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP xx.xx-xxx, doravante
           denominada simplesmente Mirai Store, e, de outro lado, o cliente, qualificado no momento da compra dos produtos Mirai Store, doravante denominado
-          simplesmente Cliente. Considerando que a Mirai Store realiza venda de produtos e serviços pela internet; Considerando o interesse do Cliente na compra
+          simplesmente Cliente.
+          <br />
+          <br />
+          Considerando que a Mirai Store realiza venda de produtos e serviços pela internet; Considerando o interesse do Cliente na compra
           dos produtos oferecidos pela Mirai Store ("Produtos") em seus canais de venda; O presente contrato tem por finalidade estabelecer as condições gerais
-          de uso e compra de produtos e serviços do cliente do site. I. Confidencialidade: é de responsabilidade da Mirai Store a preservação da
-          confidencialidade de todos os dados e informações fornecidos pelo Cliente no processo de compra. A segurança do site é auditada diariamente e
-          garantida contra a ação de hackers, através do selo "Site Blindado". II. Serviço de Atendimento ao Cliente (SAC): O cliente dispõe desse serviço para
+          de uso e compra de produtos e serviços do cliente do site.
+          <br />
+          <br />
+          <b>I.</b> Confidencialidade: é de responsabilidade da Mirai Store a preservação da
+          confidencialidade de todos os dados e informações fornecidos pelo Cliente no processo de compra.
+          <br />
+          <br />
+          <b>II.</b> Serviço de Atendimento ao Cliente (SAC): O cliente dispõe desse serviço para
           sanar suas dúvidas, solucionar eventuais solicitações ou reclamações a respeito do seu pedido ou de qualquer conteúdo disponibilizado no site. O SAC
-          poderá ser acionado por meio de telefone ou de formulário do site. III. Política de entrega: o prazo para entrega dos Produtos é informado durante o
+          poderá ser acionado por meio de telefone ou de formulário do site.
+          <br />
+          <br />
+          <b>III.</b> Política de entrega: o prazo para entrega dos Produtos é informado durante o
           procedimento de compra, contabilizado em dias úteis. As entregas dos Produtos são realizadas de segunda a sexta-feira, das 8h às 22h.
-          Excepcionalmente, algumas entregas de Produtos podem ocorrer aos sábados, domingos e feriados. III.I - A conferência da adequação das dimensões do
+          Excepcionalmente, algumas entregas de Produtos podem ocorrer aos sábados, domingos e feriados.
+          <br />
+          <br />
+          <b>III.I</b> - A conferência da adequação das dimensões do
           produto é de responsabilidade do Cliente, que deverá se assegurar de que estas estão de acordo com os limites espaciais dos elevadores, portas e
           corredores do local da entrega. Não será realizada a montagem ou desmontagem do produto, transporte pela escada e/ou portas e janelas, ou içamento das
-          entregas. III.II - Serão realizadas até três tentativas de entrega no local informado, em dias alternados, com intervalo de até 48h entre uma entrega
+          entregas.
+          <br />
+          <br />
+          <b>III.II</b> - Serão realizadas até três tentativas de entrega no local informado, em dias alternados, com intervalo de até 48h entre uma entrega
           e outra. É indispensável que, no endereço solicitado, haja uma pessoa autorizada pelo comprador, maior de 18 anos, e portando documento de
           identificação para receber a mercadoria e assinar o protocolo de entrega. Se houver três tentativas de entrega sem sucesso, o pedido retornará para o
-          Centro de Distribuição da Mirai Store. III.III - Após a finalização do pedido não é possível alterar a forma de pagamento e/ou endereço de entrega,
-          solicitar adiantamento ou, ainda, prioridade da entrega. III.IV - O prazo de entrega informado durante o procedimento de compra do Produto leva em
+          Centro de Distribuição da Mirai Store.
+          <br />
+          <br />
+          <b>III.III</b> - Após a finalização do pedido não é possível alterar a forma de pagamento e/ou endereço de entrega,
+          solicitar adiantamento ou, ainda, prioridade da entrega.
+          <br />
+          <br />
+          <b>III.IV</b> - O prazo de entrega informado durante o procedimento de compra do Produto leva em
           consideração o estoque, a região, o processo de emissão da nota fiscal e o tempo de preparo do produto. A cada atualização no status de entrega do
-          pedido, o sistema da Mirai Store envia, automaticamente, e-mails de alerta para o Cliente. III.V - O valor do frete da entrega é calculado com base no
-          local de entrega, peso e dimensões do Produto. III.VI - A Mirai Store não autoriza a transportadora a: entrar no domicílio; entregar por meios
+          pedido, o sistema da Mirai Store envia, automaticamente, e-mails de alerta para o Cliente.
+          <br />
+          <br />
+          <b>III.V</b> - O valor do frete da entrega é calculado com base no
+          local de entrega, peso e dimensões do Produto.
+          <br />
+          <br />
+          <b>III.VI</b> - A Mirai Store não autoriza a transportadora a: entrar no domicílio; entregar por meios
           alternativos (exemplo: içar produto por janela); realizar instalação ou manutenção de produtos; abrir a embalagem do produto; realizar entrega em
-          endereço diferente do que consta no DANFE; realizar entrega a menor de idade ou sem documento de identificação. III.VII - A Mirai Store não se
+          endereço diferente do que consta no DANFE; realizar entrega a menor de idade ou sem documento de identificação.
+          <br />
+          <br />
+          <b>III.VII</b> - A Mirai Store não se
           responsabiliza pela retenção de mercadorias na SEFAZ quando esta se dever exclusivamente a pendências do cliente, sendo, portanto, necessário seu
           comparecimento no posto fiscal para que a mercadoria seja liberada, tendo em vista que nestes casos as informações referentes a liberações e
-          pagamentos só são passadas aos interessados. IV. Direito de arrependimento: ao Cliente será facultado o exercício do direito de arrependimento da
+          pagamentos só são passadas aos interessados.
+          <br />
+          <br />
+          <b>IV.</b> Direito de arrependimento: ao Cliente será facultado o exercício do direito de arrependimento da
           compra, com a finalidade de devolução do Produto, hipótese na qual deverão ser observadas as seguintes condições: o prazo de desistência da compra do
           produto é de até 7 (sete) dias corridos, a contar da data do recebimento; em caso de devolução, o produto deverá ser devolvido à Mirai Store na
-          embalagem original, acompanhado do DANFE (Documento Auxiliar da Nota Fiscal Eletrônica), do manual e de todos os seus acessórios. IV.I - O Cliente
+          embalagem original, acompanhado do DANFE (Documento Auxiliar da Nota Fiscal Eletrônica), do manual e de todos os seus acessórios.
+          <br />
+          <br />
+          <b>IV.I</b> - O Cliente
           deverá solicitar a devolução através do Serviço de Atendimento ao Cliente (SAC) ou diretamente no Painel de Controle, no tópico "cancelar pedido". As
-          despesas decorrentes de coleta ou postagem do Produto serão custeadas pela Mirai Store. IV.II - Após a chegada do produto ao Centro de Distribuição, a
-          Mirai Store verificará se as condições supra citadas foram atendidas. Em caso afirmativo, providenciará a restituição no valor total da compra. IV.III
-          - Em compras com cartão de crédito a administradora do cartão será notificada e o estorno ocorrerá na fatura seguinte ou na posterior, de uma só vez,
+          despesas decorrentes de coleta ou postagem do Produto serão custeadas pela Mirai Store.
+          <br />
+          <br />
+          <b>IV.II</b> - Após a chegada do produto ao Centro de Distribuição, a
+          Mirai Store verificará se as condições supra citadas foram atendidas. Em caso afirmativo, providenciará a restituição no valor total da compra.
+          <br />
+          <br />
+          <b>IV.III</b> - Em compras com cartão de crédito a administradora do cartão será notificada e o estorno ocorrerá na fatura seguinte ou na posterior, de uma só vez,
           seja qual for o número de parcelas utilizado na compra. O prazo de ressarcimento e, ainda, a cobrança das parcelas remanescentes após o estorno
           integral do valor do Produto no cartão de crédito do Cliente realizado pela Mirai Store, é de responsabilidade da administradora do cartão. Na
           hipótese de cobrança de parcelas futuras pela administradora do cartão, o Cliente não será onerado, vez que a Mirai Store, conforme mencionado acima,
           realiza o estorno do valor integral do Produto em uma única vez, sendo o crédito referente ao estorno concedido integralmente pela administradora do
-          cartão na fatura de cobrança subsequente ao mês do cancelamento. IV.IV - Em compras pagas com boleto bancário ou débito em conta, a restituição será
+          cartão na fatura de cobrança subsequente ao mês do cancelamento.
+          <br />
+          <br />
+          <b>IV.IV</b> - Em compras pagas com boleto bancário ou débito em conta, a restituição será
           efetuada por meio de depósito bancário, em até 10 (dez) dias úteis, somente na conta corrente do(a) comprador(a), que deve ser individual. É
-          necessário que o CPF do titular da conta corrente. <br /> <br /> Mirai Store CNPJ: xx.xxx.xxx/xxxx-xx
-          <br /> Endereço: Avenida Pátria, 1292 - São Geraldo, Porto Alegre/RS - CEP xx.xxx-xxx <br />
-          Loja oficial e registrada | www.google.com
+          necessário que o CPF do titular da conta corrente.
+          <br />
+          <br />
+          Mirai Store CNPJ: xx.xxx.xxx/xxxx-xx
+          <br />
+          Endereço: Av. Paulista, 807 - Bela Vista, São Paulo/SP - CEP xx.xxx-xxx
+          <br />
+          Loja oficial e registrada | www.miraistore.com
         </p>
       </div>
-      <br />
-      <br />
       <Footer />
     </>
   );
