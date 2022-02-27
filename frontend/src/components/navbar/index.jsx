@@ -30,13 +30,9 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <div className="dropdown nav-links">
-                  <div>
-                    <Link to="/products" onClick={closeMobileMenu}>
-                      <span className="undereffect">Produtos</span>
-                    </Link>
-                  </div>
-                </div>
+                <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
+                  <span className="undereffect">Produtos</span>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link to="/terms" className="nav-links" onClick={closeMobileMenu}>
@@ -44,7 +40,7 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                <Link to="/policy" className="nav-links" onClick={closeMobileMenu}>
                   <span className="undereffect">Trocas e Devoluções</span>
                 </Link>
               </li>

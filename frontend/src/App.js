@@ -4,7 +4,7 @@ import "./App.css";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Products from "./pages/products";
-import Terms from "./pages/terms";
+import TermsPage from "./pages/terms";
 import Register from "./pages/register";
 import PasswordRecovery from "./pages/reset";
 import PasswordChange from "./pages/reset/change-password";
@@ -15,6 +15,8 @@ import CartPage from "./pages/cart";
 
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import PolicyPage from "./pages/policy";
+import CheckoutPage from "./pages/checkout";
 
 function App() {
   /*
@@ -50,11 +52,13 @@ function App() {
           />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:category/:id" element={<ProductPage />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/policy" element={<PolicyPage />} />
           <Route path="/password-reset" element={<PasswordRecovery />} />
           <Route path="/password-reset/:token" element={<PasswordChange />} />
           <Route path="/email-confirm/:token" element={<EmailConfirmation />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart/checkout" element={<CheckoutPage />} />
         </Routes>
       </Provider>
     </Router>

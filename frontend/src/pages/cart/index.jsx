@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar";
 import "./styles.css";
 import { useSelector, useDispatch } from "react-redux";
 import { updateProduct, deleteProduct } from "../../redux/cartRedux";
+import { Link } from "react-router-dom";
 
 function CartPage() {
   const dispatch = useDispatch();
@@ -93,9 +94,11 @@ function CartPage() {
             <h3 style={{ float: "right" }}>R${cart.totalPrice.toFixed(2)}</h3>
             <h3>Total:</h3>
             <br />
-            <button>
-              <div>FINALIZAR COMPRA</div>
-            </button>
+            <Link to={"/cart/checkout"}>
+              <button>
+                <div>FINALIZAR COMPRA</div>
+              </button>
+            </Link>
             <p style={{ textAlign: "center", marginTop: "20px" }}>Aplique um Código de cupom, para receber descontos.</p>
           </div>
           <div></div>

@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar/index";
 
-function Terms() {
+function TermsPage() {
   return (
     <>
       <Navbar />
@@ -11,7 +11,7 @@ function Terms() {
       <h1 style={{ textAlign: "center" }}>Termos de Serviço</h1>
       <br />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <p style={{ textAlign: "left", width: "1200px", fontSize: "20pt" }}>
+        <p style={{ textAlign: "left", width: "40em", fontSize: "20pt", margin: "50px 50px 50px 50px" }}>
           Termos e Condições de Compra e Venda da Mirai Store, com sede na Avenida Pátria, 1292 - São Geraldo, Porto Alegre/RS - CEP xx.xx-xxx, doravante
           denominada simplesmente Mirai Store, e, de outro lado, o cliente, qualificado no momento da compra dos produtos Mirai Store, doravante denominado
           simplesmente Cliente. Considerando que a Mirai Store realiza venda de produtos e serviços pela internet; Considerando o interesse do Cliente na compra
@@ -63,4 +63,4 @@ function Terms() {
   );
 }
 
-export default Terms;
+export default TermsPage;

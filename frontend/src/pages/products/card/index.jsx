@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.css";
-import { default as HalfStar } from "../../../assets/img/starfull.svg";
+
 import { Link } from "react-router-dom";
+import ProductStar from "./stars";
 
 function Product(props) {
   const category = props.product.category;
@@ -17,12 +18,7 @@ function Product(props) {
         </Link>
         <div id="card-container">
           <div id="card-info">
-            <div id="card-stars">
-              <img className="star" src={HalfStar} alt="" />
-              <img className="star" src={HalfStar} alt="" />
-              <img className="star" src={HalfStar} alt="" />
-              <img className="star" src={HalfStar} alt="" />
-            </div>
+            <ProductStar score={props.product.rating} />
             <small>
               <span>{props.product.title}</span>
             </small>
